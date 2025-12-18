@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project LIMS | The Future is Folded</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --stone: #F0EEE6;
+            --basalt: #1A1A1A;
+            --persimmon: #FF5E3A;
+        }
+        body {
+            background-color: var(--stone);
+            color: var(--basalt);
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Cinzel', serif;
+        }
+        .text-accent {
+            color: var(--persimmon);
+        }
+        .bg-accent {
+            background-color: var(--persimmon);
+        }
+        .border-accent {
+            border-color: var(--persimmon);
+        }
+        .arch-mask {
+            mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg"><path d="M100 0 C155 0 200 45 200 100 V300 H0 V100 C0 45 45 0 100 0 Z" /></svg>');
+            -webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg"><path d="M100 0 C155 0 200 45 200 100 V300 H0 V100 C0 45 45 0 100 0 Z" /></svg>');
+            mask-size: cover;
+            -webkit-mask-size: cover;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-8 py-6 mix-blend-difference text-white">
+        <div class="serif text-xl tracking-widest font-bold">PROJECT LIMS</div>
+        <div class="flex gap-8 text-sm uppercase tracking-wide">
+            <a href="#" class="hover:text-gray-300 transition">Manifesto</a>
+            <a href="#" class="hover:text-gray-300 transition">Specs</a>
+            <a href="#" class="hover:text-gray-300 transition">Pre-order</a>
+        </div>
+    </nav>
+
+    <section class="relative h-screen w-full flex flex-col md:flex-row border-b border-black">
+        
+        <div class="w-full md:w-1/2 h-full flex flex-col justify-center px-12 md:px-24 relative bg-[#F5F5F0]">
+            <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('https://www.transparenttextures.com/patterns/concrete-wall.png')]"></div>
+            
+            <p class="text-sm uppercase tracking-[0.3em] mb-4 text-gray-500">Model 01 // Release 2025</p>
+            <h1 class="text-6xl md:text-8xl leading-none mb-6">
+                THE <br/>
+                FUTURE <br/>
+                IS <span class="text-accent">FOLDED</span>.
+            </h1>
+            <p class="max-w-md text-lg text-gray-600 mb-12">
+                You are overstimulated. Stimulation is wonderful, but balance is necessary. Reclaim your focus with a device designed for meaning.
+            </p>
+            
+            <button class="group relative px-8 py-4 border-2 border-black w-max overflow-hidden hover:text-white transition-colors duration-300">
+                <span class="relative z-10 font-bold tracking-widest uppercase">Disconnect to Connect</span>
+                <div class="absolute top-0 left-0 w-full h-full bg-black transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></div>
+            </button>
+        </div>
+
+        <div class="w-full md:w-1/2 h-full bg-black relative flex items-center justify-center overflow-hidden">
+            <div class="relative w-3/4 h-3/4 bg-gray-800 arch-mask overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1597585090158-b86a87c1266b?q=80&w=2600&auto=format&fit=crop" 
+                     class="w-full h-full object-cover opacity-80 mix-blend-overlay" alt="Texture">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-72 border-4 border-stone-200 rounded-3xl bg-gray-900 shadow-2xl flex flex-col items-center justify-between py-4">
+                    <div class="w-12 h-1 bg-gray-700 rounded-full"></div>
+                    <div class="text-stone-200 text-xs tracking-widest opacity-50">LIMS</div>
+                </div>
+            </div>
+            
+            <div class="absolute bottom-20 right-20 w-32 h-32 border border-accent flex items-center justify-center animate-pulse">
+                <span class="text-accent text-xs font-mono">NO NOISE</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-8 bg-[#1A1A1A] text-[#F0EEE6]">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="w-1 h-24 bg-accent mx-auto mb-12"></div>
+            <h2 class="text-4xl md:text-5xl leading-tight serif mb-8">
+                "We are drowning in a sea of dopamine. The device in your pocket demands your soul, but offers no substance."
+            </h2>
+            <p class="text-xl font-light text-gray-400">
+                Project LIMS isn't about rejecting technology. It’s about building a sanctuary within it.
+            </p>
+        </div>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-3 border-t border-black">
+        <div class="border-r border-black p-12 h-96 flex flex-col justify-between hover:bg-white transition bg-[#F0EEE6]">
+            <span class="text-xs font-bold border border-black rounded-full w-6 h-6 flex items-center justify-center">1</span>
+            <div>
+                <h3 class="text-2xl mb-2">Tactile Satisfaction</h3>
+                <p class="text-sm text-gray-600">The snap of the hinge is engineered to release tension, not increase it. Physicality returns to digital interaction.</p>
+            </div>
+        </div>
+        
+        <div class="border-r border-black p-12 h-96 flex flex-col justify-between hover:bg-white transition bg-[#F0EEE6]">
+            <span class="text-xs font-bold border border-black rounded-full w-6 h-6 flex items-center justify-center">2</span>
+            <div>
+                <h3 class="text-2xl mb-2">Essential OS</h3>
+                <p class="text-sm text-gray-600">No infinite scroll. No social feeds. Just tools for creativity, communication, and music.</p>
+            </div>
+        </div>
+
+        <div class="p-12 h-96 flex flex-col justify-between hover:bg-white transition bg-[#F0EEE6]">
+            <span class="text-xs font-bold border border-black rounded-full w-6 h-6 flex items-center justify-center">3</span>
+            <div>
+                <h3 class="text-2xl mb-2">Modern Core</h3>
+                <p class="text-sm text-gray-600">5G connectivity. Crisp OLED. 4-day battery life. The power of the future, without the leash.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-[#F0EEE6] py-12 px-8 flex justify-between items-end">
+        <div>
+            <h4 class="serif text-2xl mb-2">PROJECT LIMS</h4>
+            <p class="text-xs text-gray-500">EST. 2025 // NEW YORK</p>
+        </div>
+        <div class="text-right">
+            <a href="#" class="text-accent text-lg hover:underline">Reserve Yours &rarr;</a>
+        </div>
+    </footer>
+
+</body>
+</html>
