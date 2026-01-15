@@ -328,7 +328,7 @@
     <script>
         gsap.registerPlugin(ScrollTrigger);
 
-        // --- Animations (Hero, Scroll, etc) ---
+        // --- Animations ---
         window.addEventListener('load', () => {
             const tl = gsap.timeline();
             tl.to('.loader', { yPercent: -100, duration: 1, ease: 'power4.inOut', delay: 0.5 })
@@ -352,17 +352,21 @@
         gsap.from('.feature-item', { scrollTrigger: { trigger: '#product', start: 'top 60%' }, x: 50, opacity: 0, stagger: 0.2, duration: 1, delay: 0.5, ease: 'power3.out' });
 
 
-        // --- FORM LOGIC ---
+        // --- FORM LOGIC (FIXED) ---
         
-        // 1. Next Step Logic
         function nextStep() {
             const emailInput = document.getElementById('email-input');
+            
+            // 1. Check validity first
             if (!emailInput.checkValidity()) {
                 emailInput.reportValidity();
                 return;
             }
 
-            // Animate Step 1 Out
+            // 2. CRITICAL FIX: Remove 'required' attribute so browser doesn't block submit on hidden field
+            emailInput.removeAttribute('required');
+
+            // 3. Animate Step 1 Out
             gsap.to('#step-1', {
                 opacity: 0,
                 x: -50,
@@ -381,7 +385,7 @@
             });
         }
 
-        // 2. Formspree AJAX Submission
+        // Formspree AJAX Submission
         const form = document.getElementById("lims-form");
         
         async function handleSubmit(event) {
@@ -422,7 +426,6 @@
                         } else {
                             alert("Oops! There was a problem submitting your form");
                         }
-                        // Reset button
                         btn.innerText = originalText;
                         btn.disabled = false;
                         btn.classList.remove('opacity-50', 'cursor-not-allowed');
